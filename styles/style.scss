@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+$black: #000000;
+$white: #ffffff;
+$background-color: #F1F3F2;
+$accent: #38CEA8;
+$light-accent: #EAFEEC;
+$ligther-accent: #F1FFF8;
+$medium-accent: #E7F9F5;
+$light-grey: #F0E9E9;
+$grey: #888282;
+$stroke: #B1BBEE;
+$txt-main: #376474;
+$head-txt: #212D32;
+$light-text: #20414D;
+$icons: #32505B;
+$red: #F62A2A;
+
+@mixin flex($flex-flow, $align, $justify, $gap){
+    display: flex;
+    flex-flow: $flex-flow;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+}
+@mixin Roboto($size, $weight, $height, $letter){
+    font-family: Roboto;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+    letter-spacing: $letter;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+//FONTS
+h1{
+    @include Roboto(3rem, 400, 3.5rem, 0em);
+    color: $head-txt;
+}
+h2{
+    @include Roboto(1.5rem, 400, 2rem, 0em);
+}
+p{
+    @include Roboto(1rem, 400, 1.5rem, 0em);
+}
+//LOGO
+.logo{
+    @include flex(row nowrap, center, initial, 2px);
+    svg{
+        circle{
+            fill: $accent;
+        }
+        path{
+            stroke: $accent;
+        }
+    }
+    span{
+        @include Roboto(24px, 400, 32px, 0em);
+        color: $black;
+    }
+}
+//BUTTONS
+.btn-fill{
+    @include Roboto(1rem, 400, 1.5rem, 0em);
+    text-align: center;
+    padding: 16px 32px;
+    border-radius: 100px;
+    background-color: $accent;
+    color: $white;
+}
+.btn-outline{
+    @include Roboto(1rem, 400, 1.5rem, 0em);
+    text-align: center;
+    padding: 8px 32px;
+    border: $accent solid 2px;
+    border-radius: 100px;
+    color: $accent;
+}
+//HEADER
+.header{
+    @include flex(row wrap, center, space-between, 24px);
+    background-color: $light-accent;
+    padding: 24px 3%;
+    &__menu{
+        background-color: $ligther-accent;
+    }
+}
+.socials{
+    @include flex(row nowrap, center, initial, 24px);
+}
+.social-icon{
+    svg,img{
+        fill: $icons;
+    }
+    :hover{
+        fill: $accent;
+    }
+}
+.menu{
+    @include flex(row nowrap, center, space-between, 2%);
+    @include Roboto(16px, 400, 24px, 0em);
+    padding: 0 5%;
+    a, svg{
+        color: $light-text;
+        fill: $light-text;
+    }
+    &__contacts{
+        @include flex(row wrap, flex-end, flex-end, initial);
+    }
+    &__list{
+        @include flex(row nowrap, center, initial, initial);
+    }
+    &__sub-list{
+        @include flex(column nowrap, flex-start, initial, initial);
+        display: none;
+        position: absolute;
+        background-color: $ligther-accent;
+
+    }
+    &__item{
+        padding: 10px;
+        &--select{
+            a{
+                text-decoration: underline;
+            }
+        }
+        :hover{
+            color: $accent;
+            fill: $accent; 
+        }
+    }
+    &__item:hover  &__sub-list{
+        display: initial;
+    }
+}
+//HAMBURGER
+#checkbox_toggle{
+    display: none;
+}
+.hamburger{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.hamburger-line{
+    background-color: $head-txt;
+    display: block;
+    height: 2px;
+    width: 24px;
+    position: relative;
+}
+.hamburger-line::before,
+.hamburger-line::after {
+    background-color: $head-txt;
+    content: '';
+    display: block;
+    position: absolute;
+    transition: all .3s;
+    width: 100%;
+    height: 100%;
+}
+.hamburger-line::before{
+    top: 7px;
+}
+.hamburger-line::after{
+    top: -7px;
+}
+@media (max-width: 1030px){
+    .menu-list{
+        // display: none;
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        background-color: $ligther-accent;
+        text-align: center;
+        top: 104px;
+        right: 0;
+        left: 0;
+        margin-top: 20px;
+    }
+    .hamburger{
+        display: block;
+        padding: 20px 0;
+    }
+    #checkbox_toggle:checked ~ .menu-list{
+        display: block;
+        max-height: 100%;
+        transition: all .5s;
+    }
+    #checkbox_toggle:checked ~ .hamburger .hamburger-line{
+        background-color: transparent;
+    }
+    #checkbox_toggle:checked ~ .hamburger .hamburger-line::before{
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    #checkbox_toggle:checked ~ .hamburger .hamburger-line::after{
+        transform: rotate(45deg);
+        top: 0;
+    }
+}
+//PROMO
+.promo{
+    background-color: $background-color;
+    &__img{
+        max-width: 100%;
+    }
+    @include flex(row wrap, center, space-between, initial);
+    padding: 0 10%;
+    &__call-to-action{
+        @include flex(column nowrap, center, center, initial);
+        max-width: 488px;
+        margin: 70px 0 150px;
+    }
+    &__actions{
+        @include flex(row wrap, center, center, 18px);
+    }
+    &__btn{
+        &--red{
+            background-color: $red ;
+        }
+    }
+    &__title{
+        color: $icons;
+        font-weight: 500;
+        text-align: center;
+        b{
+            color: $txt-main;
+        }
+        margin-bottom: 16px;
+    }
+    &__description{
+        margin: -8px 0 16px;
+        text-align: center;
+        color: $txt-main;
+    }
+}
+@media (max-width: 1030px){
+    .promo{
+        padding: 0 5%;
+        @include flex(row wrap, center, center, initial);
+        &__btn{
+            width: 100%;
+        }
+        &__call-to-action{
+            max-width: 100%;
+            margin: 70px 0 70px;
+        }
+    }
+}
+//HOW IT WORKS
+.how-it-works{
+    @include flex(column nowrap, center, center, initial);
+    padding: 80px 3% 40px;
+    &__description{
+        padding: 16px 0 0;
+        text-align: center;
+        color: $txt-main;
+    }
+    &__steps{
+        @include flex(row wrap, flex-start, space-between, 32px);
+        margin: 45px 0;
+        width: 100%;
+    }
+    &__title{
+        text-align: center;
+    }
+}
+.step{
+    @include flex(row nowrap, flex-start, center, 20px);
+    max-width: 384px;
+    b{
+        color: $accent;
+    }
+    &__title{
+        @include Roboto(1.25rem, 700, 2rem, 0em);
+        color: $txt-main;
+    }
+    &__subtitle{
+        @include Roboto(1rem, 400, 1.5rem, 0em);
+        color: $txt-main;
+    }
+    p{
+        margin-top: 16px;
+        color: $txt-main;
+    }
+}
+@media (max-width: 1030px){
+    .step{
+        @include flex(row nowrap, flex-start, center, 20px);
+        max-width: 100%;
+    }
+}
+//RECIPES
+.recipes{
+    @include flex(row wrap, flex-start, space-between, 32px);
+    background-image: url(../img/photos/bg-2.png);
+    background-size: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 40px 3%;
+}
+.recip{
+    @include flex(column nowrap, center, space-between, initial);
+    background-color: $white;
+    padding: 16px;
+    max-width: 384px;
+    border-radius: 10px;
+    border-bottom: $accent solid 8px;
+    text-align: center;
+    &__title{
+        margin-top: 24px;
+    }
+    h2,p{
+        color: $txt-main;
+        max-width: 320px;
+    }
+    &__description{
+        margin: 16px 0 32px;
+    }
+    &__img{
+        max-width: 100%;
+    }
+}
+@media (max-width: 1030px){
+    .recip{
+        max-width: 90%;
+    }
+}
+//STORIES
+.stori{
+    @include flex(row wrap, center, space-between, 32px);
+    padding: 60px 3%;
+    &__title{
+        color: $accent;
+    }
+    &__txt{
+        max-width: 700px;
+    }
+    &__subtitle{
+        margin: 8px 0 24px;
+    }
+    &__subtitle, &__description{
+        color: $head-txt;
+    }
+    &__img{
+        border: $accent solid 4px;
+        border-radius: 15px;
+    }
+}
+@media (max-width: 1030px){
+    .stori{
+        @include flex(row wrap, center, space-between, 32px);
+        padding: 60px 3%;
+        &__img{
+            max-width: 94%;        
+        }
+    }
+}
+//REVIEWS
+.reviews{
+    padding: 0 3%;
+    &__slider{
+        @include flex(row nowrap, center, space-between, 60px);
+        margin: 26px 0;
+    }
+    svg{
+        fill: $txt-main;
+    }
+    hr{
+        border: none;
+        border-radius: 10px;
+        margin: 0;
+        height: 4px;
+        background-color: $accent;
+        opacity: 35%;
+    }
+    &__box{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(456px, 1fr));
+        gap: 60px;
+        justify-content: space-between;
+        width: 100%;
+    }  
+    &--adaptive{
+        display: none;
+    }
+}
+.review{
+    @include flex(row nowrap, flex-start, initial, 40px);
+    &__txt{
+        color: $head-txt;
+    }
+    &__user{
+        @include Roboto(1.125rem, 500, 1.5rem, 0em);
+        margin: 16px 0 8px;
+        span{
+            color: $accent;
+            font-size: 1rem;
+            padding-left: 4px;
+        }
+    }
+}
+@media (max-width: 1030px){
+    .reviews{
+        display: none;
+        &__box{
+            grid-template-columns: 1fr;
+        }  
+        &__slider{
+            @include flex(row nowrap, center, space-between, 20px);
+            margin: 16px 0;
+        } 
+        &--adaptive{
+            display: block;
+        }
+    }
+    .review{
+        @include flex(row wrap, flex-start, initial, 20px);
+    }
+}
+//PROGRAM
+.program{
+    @include flex(column nowrap, center, center, initial);
+    padding: 40px 3%;
+    margin: 60px 0;
+    background-color: $medium-accent;
+    &__box{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 32px;
+        justify-content: space-between;
+        width: 100%;
+        justify-items: center
+    }
+    &__description{
+        margin: 16px 0 32px;
+        color: $head-txt;
+        max-width: 760px;
+        text-align: center;
+    }
+    &__title{
+        color: $head-txt;
+        text-align: center;
+    }
+}
+.program-item{
+    @include flex(column nowrap, center, center, initial);
+    max-width: 276px;
+    &__title{
+        @include Roboto(1.375rem, 500, 1.5rem, 0em);
+        text-align: center;
+        color: $head-txt;
+        margin: 24px 0 16px;
+    }
+    &__description{
+        color: $head-txt;
+        text-align: center;
+    }
+}
+@media (max-width: 1030px){
+    .program{
+        &__box{
+            grid-template-columns: 1fr;
+        }
+    }
+}
+//TABLE
+.table-plan-choice{
+    margin: 90px 3% 100px;
+    width: 94%;
+    border-collapse: collapse; 
+    border-spacing: 0;
+    &__description{
+        color: $txt-main;
+    }
+    &__title{
+        color: $head-txt;
+    }
+    &__price{
+        color: $head-txt;
+        span{
+            @include Roboto(58px, 300, 56px, 0em);
+            color: $head-txt;
+        }
+    }
+    td, th{
+        border: 1px solid $stroke; 
+        padding: 16px 50px;
+        text-align: center;
+        color: $head-txt;
+        vertical-align: middle;
+    }
+    td:nth-child(3), th:nth-child(3) { 
+        border-left: 3px solid $red; 
+        border-right: 3px solid $red;
+    }
+    tr:first-child th:nth-child(3) { 
+        border-top: 3px solid $red;
+    }
+    tr:last-child td:nth-child(3) { 
+        border-bottom: 3px solid $red;
+    }
+    &--standard,&--advanced{
+        display: none;
+    }
+    &--advanced{
+        td:nth-child(2), th:nth-child(2) { 
+            border-left: 3px solid $red; 
+            border-right: 3px solid $red;
+        }
+        tr:first-child th:nth-child(2) { 
+            border-top: 3px solid $red;
+        }
+        tr:last-child td:nth-child(2) { 
+            border-bottom: 3px solid $red;
+        } 
+    }
+}
+.table-wrapper{
+    @include flex(column nowrap, center, center, 32px);
+    margin: 90px 3% 100px;
+}
+@media (max-width: 1030px){
+    .table-plan-choice{
+        display: none;
+        margin: 0;
+        td, th{
+            padding: 16px;
+        }
+        &--standard,&--advanced{
+            display: block;
+        }
+        .btn-outline{
+            padding: 8px 16px;
+        }
+    }
+}
+//QUESTIONS
+.questions{
+    padding: 0 3% 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(590px, 1fr));
+    gap: 40px;
+    justify-content: space-between;
+}
+.question{
+    @include flex(row nowrap, flex-start, flex-start, 16px);
+    &__title{
+        color: $head-txt;
+    }
+    &__description{
+        color: $light-text;
+    }
+    &__ellipse{
+        background-color: $accent;
+        border-radius: 100px;
+        b{
+            @include flex(initial, center, center, initial);
+            font-size: 40px;
+            color: $white;
+            height: 64px;
+            width: 64px;
+        }
+    }
+}
+@media (max-width: 1030px){
+    .questions{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+//FORM
+.bg-3{
+    background-image: url(../img/photos/bg-3.png);
+    background-size: 100%;
+    background-position: center;
+    background-size: cover;
+    padding: 110px 10% 110px;
+}
+.form-box{
+    background-color: $white;
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 400px;
+    &__btn{
+        padding: 8px 32px;
+    }
+    input{
+        background-color: $light-grey;
+        border: $grey 1px solid;
+        width: 90%;
+        height: 40px;
+        border-radius: 100px;
+        padding-left: 16px;
+        margin-top: 30px;
+    }
+    input::placeholder {
+        color: $grey;
+    }
+    &__description, &__hlp-txt{
+        color: $head-txt;
+        @include Roboto(0.75rem, 300, 1.125rem, 0em);
+        b{
+            color: $head-txt;
+        }
+    }
+    &__hlp-txt{
+        color: $head-txt;
+        @include Roboto(0.5625rem, 300, 1.125rem, 0em);
+    }
+    &__actions{
+        @include flex(row nowrap, center, flex-start, 20px);
+        margin-top: 16px;
+    }
+    &__title{
+        color: $accent;
+    }
+    &__subtitle{
+        margin-bottom: 30px;
+        color: $light-text;
+    }
+}
+@media (max-width: 1030px){
+    .form-box{
+        padding: 30px;
+        &__btn{
+            padding: 8px 32px;
+        }
+        &__actions{
+            @include flex(row wrap, center, flex-start, 10px);
+            margin-top: 16px;
+        }
+    }
+}
+//COACHES
+.coaches{
+    padding: 90px 10%;
+    &__box{
+        margin: 70px 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(490px, 1fr));
+        gap: 40px;
+        justify-content: space-between;
+    }
+    &__title{
+        color: $head-txt;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    &__subtitle{
+        color: $light-text;
+        text-align: center;
+    }
+}
+.coach{
+    @include flex(row nowrap, initial, initial, 20px);
+    &__name{
+        @include flex(row nowrap, flex-start, space-between, 40px);
+        width: 100%;
+    }
+    &__socials{
+        @include flex(row nowrap, flex-start, flex-start, 20px);
+    }
+    &__box{
+        @include flex(column nowrap, flex-start, flex-start, 8px);
+    }
+    &__title{
+        color: $accent;
+        font-size: 1.125rem;
+    }
+    &__description{
+        color: $light-text;
+    }
+    &__img{
+        max-width: 136px;
+        max-height: 136px;
+    }
+}
+@media (max-width: 1030px){
+    .coach{
+        @include flex(row wrap, initial, initial, 20px);
+        &__name{
+            @include flex(row wrap, flex-start, space-between, 20px);
+            width: 100%;
+        }
+    }
+    .coaches{
+        &__box{
+            grid-template-columns: 1fr;
+            margin: 60px 0;
+        }
+    }
+}
+//JOURNEY
+.journey{
+    background-color: $accent;
+    padding: 80px 10%;
+    @include flex(row wrap, center, space-between, 20px);
+    b{
+        color: $white;
+    }
+    &__btn{
+        color: $white;
+        border-color: $white;
+    }
+}
+//FOOTER
+.footer{
+    padding: 20px 10%;
+    display: grid;
+    grid-template-columns: minmax(280px, 3fr) repeat(auto-fit, minmax(180px, 1fr));
+    justify-content: space-between;
+    justify-items: stretch;
+    align-items: start;
+    gap: 2%;
+    &__menu{
+        @include flex(column nowrap, flex-start, initial, initial);
+    }
+    &__info{
+        max-width: 280px;
+        p{
+            @include Roboto(0.75rem, 400, 0.875rem, 0em);
+            color: $head-txt;
+        }
+        :nth-child(3){
+            color: $txt-main;
+            margin: 8px 0 16px;
+        }
+        :nth-child(1){
+            margin-bottom: 32px;
+        }
+    }
+    &__title{
+        color: $txt-main;
+    }
+}
+@media (max-width: 1030px){
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+        &__info{
+            max-width: 100%;
+        }
+    }
+}
+
+
+
+
+
