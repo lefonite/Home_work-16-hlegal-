@@ -1,8 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 $black: #000000;
 $white: #ffffff;
-$supersoft: linear-gradient(to bottom left, #323264, #323264, #643E72);
+$accent: #F0145A;
+$grey-text: #B3B3BA;
+$grey-separator: #E6E6F0;
+$grey-bg : #F5F5FA;
+$active: #24A3FF;
+$main-regular: #323264;
+$main-soft: #686887;
 
+$gradient-red-text: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+$supersoft: linear-gradient(228.57deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
 
 @mixin flex($flex-flow, $align, $justify, $gap){
     display: flex;
@@ -11,29 +19,234 @@ $supersoft: linear-gradient(to bottom left, #323264, #323264, #643E72);
     justify-content: $justify;
     gap: $gap;
 }
-@mixin Roboto($size, $weight, $height, $letter){
-    font-family: Roboto;
+@mixin Montserrat($size, $weight, $height, $letter){
+    font-family: 'Montserrat', sans-serif;
     font-size: $size;
     font-weight: $weight;
     line-height: $height;
     letter-spacing: $letter;
 }
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 //FONTS
 h1{
-    @include Roboto(3rem, 400, 3.5rem, 0em);
-    color: $head-txt;
+    @include Montserrat(2.375rem, 700, 2.875rem, 0em);
 }
 h2{
-    @include Roboto(1.5rem, 400, 2rem, 0em);
+    @include Montserrat(1.875rem, 700, 2.3125rem, 0em);
+}
+h3{
+    @include Montserrat(1.375rem, 700, 1.6875rem, 0em);
+}
+h4{
+    @include Montserrat(1rem, 700, 1.25rem, 0em);
 }
 p{
-    @include Roboto(1rem, 400, 1.5rem, 0em);
+    @include Montserrat(1rem, 400, 1.625rem, 0em);
 }
-//LOGO
-
-//BUTTONS
-
 //HEADER
+.nav{
+    @include flex(column nowrap, flex-end, flex-end, 12px);
+}
+.info{
+    @include flex(row nowrap, center, initial, 6px); 
+    &__social{
+        a{
+            svg{
+                fill: $grey-text;
+            }
+        }
+    }
+    &__address,&__phone,&__social{
+        :hover{
+            span{
+                color: $accent;
+            }
+            strong{
+                color: $accent;
+            }
+            svg{
+                fill: $accent;
+            }
+        }
+    }
+    &__label{
+        cursor: pointer;
+        padding: 5px 7px;
+        border-radius: 8px;
+        input{
+            display: none;
+        }
+        &--active{
+            background-color: $accent;
+            :nth-child(1){
+                color: $white;
+            }
+        }
+    }
+    &__label:hover{
+        background-color: $grey-separator;
+    }
+}
+.menu{
+    @include flex(row nowrap, flex-start, initial, 15px); 
+    a{     
+        @include Montserrat(1rem, 700, 1.25rem, 0em);
+    }
+    &__item:hover, &__item--open{
+        border-bottom: $accent 2px solid;
+        padding-bottom: 3px;
+        :nth-child(1){
+            color: #F0145A;
+        }
+    }
+}
+.header {
+    @include flex(row wrap, flex-start, space-between, 20px);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 50px 60px;
+    z-index: 1;
+    &__logo:hover{
+        opacity: 80%;
+    }
+    &__lang{
+        strong{
+            color: $white;
+        }
+    }
+    &__address{
+        span{
+            color: $white;
+        }
+    }
+    &__phone{
+        strong{
+            color: $white;
+        }
+    }
+    &__menu{
+        a{
+            color: $white;
+        }
+    }
+    &__social{
+        a{
+            svg{
+                fill: $white;
+            }
+        }
+    }
+    &__page{
+        @include flex(row nowrap, flex-start, initial, 6px);
+        svg{
+            fill: $accent;
+        }
+        span{
+            color: $main-regular;
+            @include Montserrat(2.25rem, 400, 2.75rem, 0em);
+        }
+    }
+    &--dark{
+        a{
+            color: $active; 
+            span{
+                color: $grey-text; 
+            }
+            strong{
+                color: $grey-text; 
+            }
+            svg{
+                fill: $grey-text;
+            }
+        }
+        label{
+            strong{
+                color: $grey-text; 
+            }
+        }
+    }
+}
+//MAIN
+.main-wrap{
+  background: $supersoft;  
+  border-radius: 0 0 12px 12px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  &__hero{
+    background-image: url(../img/elements/Symbol.svg);
+    background-size: auto 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    @include flex(column nowrap, center, center, 15px);
+    height: 100vh;
+  }
+  &__title{
+    color: $white;
+    text-align: center;
+  }
+}
+//TEAM
+.carousel-team{
+    margin: 60px;
+    &__img{
+        background-image: url(../img/photos/team1.png);
+        background: url(../img/photos/team1.png) center center no-repeat  fixed;
+        max-width: auto;
+        height: 100%;
+    }
+    img {
+        max-width: auto;
+        height: 100%;
+    }
+    //НЕ РАБОТАЕТ
+    &__card{
+        background-color: $grey-bg;
+        border-radius: 10px;
+        @include flex(row nowrap, flex-start, flex-start, initial);
+    }
+    &__info{
+        margin: 30px;
+        h1{
+            background-image: $gradient-red-text;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 5px 0 30px;
+        }
+        p,span{
+            color: $grey-text;
+        }
+        p{
+            @include Montserrat(1rem, 700, 1.25rem, 0em);
+        }
+        span{
+            @include Montserrat(0.875rem, 400, 1.25rem, 0em);
+        }
+    }
+    &__tag{
+        @include flex(row nowrap, center, initial, 5px);
+        color: $active;
+        text-transform: uppercase;
+        @include Montserrat(0.875rem, 700, 1.5rem, 0em);
+        svg{
+            stroke: $active;
+        }
+    }
+    &__slider{
+        @include flex(row nowrap, center, center, 15px);
+        margin-top: 30px;
+        svg{
+            fill: $active;
+            opacity: 20%;
+        }
+        :nth-child(1){
+            opacity: 100%;
+        }
+    }
+
+}

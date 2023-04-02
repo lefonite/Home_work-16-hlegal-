@@ -1,29 +1,282 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
-  font-family: Roboto;
-  font-size: 3rem;
-  font-weight: 400;
-  line-height: 3.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.375rem;
+  font-weight: 700;
+  line-height: 2.875rem;
   letter-spacing: 0em;
-  color: #212D32;
 }
 
 h2 {
-  font-family: Roboto;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 2.3125rem;
+  letter-spacing: 0em;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.6875rem;
+  letter-spacing: 0em;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25rem;
   letter-spacing: 0em;
 }
 
 p {
-  font-family: Roboto;
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 400;
+  line-height: 1.625rem;
+  letter-spacing: 0em;
+}
+
+.nav {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.info {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: initial;
+  gap: 6px;
+}
+.info__social a svg {
+  fill: #B3B3BA;
+}
+.info__address :hover span, .info__phone :hover span, .info__social :hover span {
+  color: #F0145A;
+}
+.info__address :hover strong, .info__phone :hover strong, .info__social :hover strong {
+  color: #F0145A;
+}
+.info__address :hover svg, .info__phone :hover svg, .info__social :hover svg {
+  fill: #F0145A;
+}
+.info__label {
+  cursor: pointer;
+  padding: 5px 7px;
+  border-radius: 8px;
+}
+.info__label input {
+  display: none;
+}
+.info__label--active {
+  background-color: #F0145A;
+}
+.info__label--active :nth-child(1) {
+  color: #ffffff;
+}
+.info__label:hover {
+  background-color: #E6E6F0;
+}
+
+.menu {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: initial;
+  gap: 15px;
+}
+.menu a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  letter-spacing: 0em;
+}
+.menu__item:hover, .menu__item--open {
+  border-bottom: #F0145A 2px solid;
+  padding-bottom: 3px;
+}
+.menu__item:hover :nth-child(1), .menu__item--open :nth-child(1) {
+  color: #F0145A;
+}
+
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 50px 60px;
+  z-index: 1;
+}
+.header__logo:hover {
+  opacity: 80%;
+}
+.header__lang strong {
+  color: #ffffff;
+}
+.header__address span {
+  color: #ffffff;
+}
+.header__phone strong {
+  color: #ffffff;
+}
+.header__menu a {
+  color: #ffffff;
+}
+.header__social a svg {
+  fill: #ffffff;
+}
+.header__page {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: initial;
+  gap: 6px;
+}
+.header__page svg {
+  fill: #F0145A;
+}
+.header__page span {
+  color: #323264;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 2.75rem;
+  letter-spacing: 0em;
+}
+.header--dark a {
+  color: #24A3FF;
+}
+.header--dark a span {
+  color: #B3B3BA;
+}
+.header--dark a strong {
+  color: #B3B3BA;
+}
+.header--dark a svg {
+  fill: #B3B3BA;
+}
+.header--dark label strong {
+  color: #B3B3BA;
+}
+
+.main-wrap {
+  background: linear-gradient(228.57deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+  border-radius: 0 0 12px 12px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+.main-wrap__hero {
+  background-image: url(../img/elements/Symbol.svg);
+  background-size: auto 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  height: 100vh;
+}
+.main-wrap__title {
+  color: #ffffff;
+  text-align: center;
+}
+
+.carousel-team {
+  margin: 60px;
+}
+.carousel-team__img {
+  background-image: url(../img/photos/team1.png);
+  background: url(../img/photos/team1.png) center center no-repeat fixed;
+  max-width: auto;
+  height: 100%;
+}
+.carousel-team img {
+  max-width: auto;
+  height: 100%;
+}
+.carousel-team__card {
+  background-color: #F5F5FA;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: initial;
+}
+.carousel-team__info {
+  margin: 30px;
+}
+.carousel-team__info h1 {
+  background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 5px 0 30px;
+}
+.carousel-team__info p, .carousel-team__info span {
+  color: #B3B3BA;
+}
+.carousel-team__info p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  letter-spacing: 0em;
+}
+.carousel-team__info span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0em;
+}
+.carousel-team__tag {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: initial;
+  gap: 5px;
+  color: #24A3FF;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
   line-height: 1.5rem;
   letter-spacing: 0em;
+}
+.carousel-team__tag svg {
+  stroke: #24A3FF;
+}
+.carousel-team__slider {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+.carousel-team__slider svg {
+  fill: #24A3FF;
+  opacity: 20%;
+}
+.carousel-team__slider :nth-child(1) {
+  opacity: 100%;
 }/*# sourceMappingURL=style.css.map */
