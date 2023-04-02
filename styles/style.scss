@@ -193,22 +193,25 @@ p{
 //TEAM
 .carousel-team{
     margin: 60px;
-    &__img{
-        background-image: url(../img/photos/team1.png);
-        background: url(../img/photos/team1.png) center center no-repeat  fixed;
-        max-width: auto;
-        height: 100%;
+    &__slider{
+        @include flex(row nowrap, center, center, 15px);
+        margin-top: 30px;
+        svg{
+            fill: $active;
+            opacity: 20%;
+        }
+        :nth-child(1){
+            opacity: 100%;
+        }
     }
-    img {
-        max-width: auto;
-        height: 100%;
-    }
-    //НЕ РАБОТАЕТ
-    &__card{
-        background-color: $grey-bg;
-        border-radius: 10px;
-        @include flex(row nowrap, flex-start, flex-start, initial);
-    }
+}
+.card{
+    background-color: $grey-bg;
+    border-radius: 10px;
+    // @include flex(row nowrap, flex-start, flex-start, initial);
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-auto-rows: 1fr;
     &__info{
         margin: 30px;
         h1{
@@ -237,16 +240,10 @@ p{
             stroke: $active;
         }
     }
-    &__slider{
-        @include flex(row nowrap, center, center, 15px);
-        margin-top: 30px;
-        svg{
-            fill: $active;
-            opacity: 20%;
-        }
-        :nth-child(1){
-            opacity: 100%;
-        }
+    &__img{
+        background-image: url(../img/photos/team1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        object-fit: cover;
     }
-
 }

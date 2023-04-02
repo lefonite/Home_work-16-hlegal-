@@ -202,69 +202,6 @@ p {
 .carousel-team {
   margin: 60px;
 }
-.carousel-team__img {
-  background-image: url(../img/photos/team1.png);
-  background: url(../img/photos/team1.png) center center no-repeat fixed;
-  max-width: auto;
-  height: 100%;
-}
-.carousel-team img {
-  max-width: auto;
-  height: 100%;
-}
-.carousel-team__card {
-  background-color: #F5F5FA;
-  border-radius: 10px;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: initial;
-}
-.carousel-team__info {
-  margin: 30px;
-}
-.carousel-team__info h1 {
-  background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 5px 0 30px;
-}
-.carousel-team__info p, .carousel-team__info span {
-  color: #B3B3BA;
-}
-.carousel-team__info p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.25rem;
-  letter-spacing: 0em;
-}
-.carousel-team__info span {
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1.25rem;
-  letter-spacing: 0em;
-}
-.carousel-team__tag {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: initial;
-  gap: 5px;
-  color: #24A3FF;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 700;
-  line-height: 1.5rem;
-  letter-spacing: 0em;
-}
-.carousel-team__tag svg {
-  stroke: #24A3FF;
-}
 .carousel-team__slider {
   display: flex;
   flex-flow: row nowrap;
@@ -279,4 +216,63 @@ p {
 }
 .carousel-team__slider :nth-child(1) {
   opacity: 100%;
+}
+
+.card {
+  background-color: #F5F5FA;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-auto-rows: 1fr;
+}
+.card__info {
+  margin: 30px;
+}
+.card__info h1 {
+  background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 5px 0 30px;
+}
+.card__info p, .card__info span {
+  color: #B3B3BA;
+}
+.card__info p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  letter-spacing: 0em;
+}
+.card__info span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  letter-spacing: 0em;
+}
+.card__tag {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: initial;
+  gap: 5px;
+  color: #24A3FF;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: 0em;
+}
+.card__tag svg {
+  stroke: #24A3FF;
+}
+.card__img {
+  background-image: url(../img/photos/team1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
