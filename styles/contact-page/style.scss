@@ -1,0 +1,135 @@
+@import '../colors/style.scss';
+@import '../mixins/style.scss';
+
+.adress{
+    @include flex(column nowrap, initial, initial, 10px);
+    border-bottom: 4px $grey-separator solid;
+    padding-bottom: 30px;
+    width: 100%;
+    &__phone,&__location,&__email{
+        @include Montserrat(1.3125rem, 400, 1.875rem, 0em);
+    }
+    &__email{
+        color: $active;
+    }
+    &__phone,&__location{
+        color: $main-regular;
+    }
+    &__social{
+        @include flex(row nowrap, center, initial, 10px); 
+        svg{
+            fill: $active;
+            width: 38px;
+            height: 38px;
+        }
+        strong{
+            @include Montserrat(0.75rem, 700, 0.9375rem, 0.0625rem);
+            text-transform: uppercase;
+            color: $active;
+        }
+        :hover{
+            strong,svg{
+                color: $accent; 
+                fill: $accent;
+            }
+        }
+    }
+    &__social:hover{
+        svg{
+            fill: $accent;
+        }
+        strong{
+            color: $accent;
+        }
+    }
+    a:hover{
+        color: $accent; 
+    }
+}
+.phorm{
+    @include flex(column nowrap, initial, initial, 30px);
+    &__items{
+        @include flex(column nowrap, initial, initial, 15px); 
+        input,textarea{
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            color:$black;
+            outline: none;
+            @include Montserrat(1rem, 400, 1.625rem, 0em);
+        }
+        input[type="text"]:focus,
+        textarea[type="text"]:focus,
+        input[type="tel"]:focus,
+        input[type="email"]:focus{
+            border: $active 2px solid;
+        }
+        textarea{
+            resize: none;
+            height: 70px;
+        }
+        ::placeholder{
+            color:$grey-text;
+            @include Montserrat(1rem, 400, 1.625rem, 0em);
+        }
+    }
+    &__title{
+        @include Montserrat(1.875rem, 700, 2.25rem, 0em);
+        background-image: $gradient-red-text;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &__subtitle{
+        @include Montserrat(0.75rem, 700, 0.9375rem, 0.0625rem);
+        text-transform: uppercase;
+        color: $grey-text;
+    }
+}
+.contact-page{
+    @include flex(row nowrap, initial, space-between, 60px);
+    padding: 60px 180px;
+    &__adress-wrapper{
+        @include flex(column nowrap, flex-start, initial, 30px);
+        width: 100%;
+    }
+    &__phorm-wrapper{
+        width: 100%;
+        background-color: $grey-bg;
+        border-radius: 12px;
+        padding: 30px;
+    }
+    &__phorm-wrapper:hover{
+        box-shadow: 7px 8px 25px -5px rgba($color: $grey-text, $alpha: 0.5);
+        transition: 0.5s;
+        transform: scale(1.005);
+    }
+}
+
+
+@media (min-width: 1920px){
+    .contact-page{
+        padding: 60px 280px;
+    }
+}
+
+@media (max-width: 1440px){
+    .contact-page{
+        padding: 60px;
+    }
+}
+@media (max-width: 958px){
+    .contact-page{
+        @include flex(column wrap, initial, initial, 60px);
+        padding: 30px 60px 60px;
+        &__phorm-wrapper{
+            max-width: 100%;
+            width: initial;
+        }
+    }
+}
+@media (max-width: 617px){
+    .contact-page{
+        padding: 140px 30px 30px;
+    }
+} 

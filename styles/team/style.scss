@@ -1,0 +1,324 @@
+@import '../colors/style.scss';
+@import '../mixins/style.scss';
+
+.slider{
+    @include flex(row nowrap, center, center, 15px);
+    svg{
+        fill: $active;
+        opacity: 20%;
+    }
+    :nth-child(1){
+        opacity: 100%;
+    }
+}
+.carousel-team{
+    margin: 60px;
+    &__slider{
+        margin-top: 30px;
+    }
+}
+.card{
+    background-color: $grey-bg;
+    border-radius: 10px;
+    overflow: hidden;
+    @include flex(row nowrap, stretch, center, initial);
+    &__info{
+        margin: 30px;
+        h1{
+            background-image: $gradient-red-text;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 5px 0 30px;
+        }
+        p,span{
+            color: $grey-text;
+        }
+        p{
+            @include Montserrat(1rem, 700, 1.25rem, 0em);
+        }
+        span{
+            @include Montserrat(0.875rem, 400, 1.25rem, 0em);
+        }
+    }
+    &__img{
+        background-image: url(../img/photos/team1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: 400px;
+        min-height: 298px;
+        &--2{
+            background-image: url(../img/photos/team2.png);
+        }
+        &--3{
+            background-image: url(../img/photos/team3.png);
+        }
+    }
+}
+.card:hover{
+    box-shadow: 7px 8px 25px -5px rgba($color: $grey-text, $alpha: 0.5);
+    transition: 0.5s;
+    transform: scale(1.005);
+}
+.tag{
+    @include flex(row nowrap, center, initial, 5px);
+    svg{
+        stroke: $active;
+    }
+    a{
+        color: $active;
+        text-transform: uppercase;
+        @include Montserrat(0.875rem, 700, 1.5rem, 0em);
+    }
+}
+.tag:hover{
+    svg{
+        stroke: $accent;
+    }
+    a{
+        color: $accent;
+    }
+}
+.team-page{
+    h1{
+        padding: 10px 180px 60px;
+        color: $accent;
+        background-image: $gradient-red-text;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 1fr;
+        gap: 60px;
+        margin: 0 60px 60px;
+    }
+    &__card{
+        img{
+            width: 100%;
+            border-radius: 12px;
+        }
+    }
+    &__name{
+        padding-top: 15px;
+        @include flex(column nowrap, initial, initial, 5px);
+    }
+    &__name-wrapper{
+        @include flex(row nowrap, center, space-between, initial);
+        cursor: pointer;
+        h4{
+            color: $main-regular;
+        }
+        span{
+            color: $grey-text;
+            @include Montserrat(0.875rem, 400, 1.5rem, 0em);
+        }
+    }
+    &__arrow{
+        @include flex(row nowrap, center, center, initial);
+        width: 32px;
+        height: 32px;
+        background-color: $grey-bg;    
+        border-radius: 55px;
+        path{
+            stroke: $active;
+        }
+    }
+    &__name-wrapper:hover{
+        h4{
+            color: $accent;
+        }
+        path{
+            stroke: $accent;
+        }
+    }
+}
+.team-entry{
+    @include flex(row nowrap, initial, initial, 60px);
+    padding: 10px 180px 60px;
+    &__photo{
+        object-fit: cover;
+        border-radius: 12px;
+        overflow: hidden;
+        min-width: 400px;
+        height: 500px;
+    }
+    &__wrapper{
+        max-width: 100%;
+        @include flex(column nowrap, initial, initial, 30px);
+    }
+    h1{
+        color: $accent;
+        background-image: $gradient-red-text;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &__contact{
+        @include flex(row wrap, center, initial, 10px);
+        padding-top: 15px;
+        span{
+            color: $grey-text;
+            @include Montserrat(0.875rem, 400, 1.5rem, 0em);
+        }
+        a{
+            color: $active; 
+        }
+        a:hover{
+            color: $accent; 
+        }
+        &--adaptive{
+            @include flex(column wrap, initial, initial, 10px);
+        }
+    }
+    &__title{
+        border-bottom: 4px $grey-separator solid;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        &--adaptive{
+            border-bottom: none;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+    }
+    &__adaptive{
+        @include flex(row nowrap, center, initial, 30px);
+        border-bottom: 4px $grey-separator solid;
+        padding-bottom: 30px;
+    }
+    &__info{
+        span{
+            @include Montserrat(0.875rem, 700, 1.6rem, 0.0625rem);
+            text-transform: uppercase;
+            color: $main-regular;
+        }
+        p{
+            padding-top: 15px;
+        }
+    }
+}
+
+@media (min-width: 1920px){
+    .carousel-team{
+        margin: 60px 160px;
+    }
+    .team-entry{
+        padding: 10px 280px 60px;
+        &__adaptive{
+            display: none;
+        }
+    }
+    .team-page{
+        &__wrapper{
+            margin: 0 160px 60px;
+        }
+    }
+}
+@media (max-width: 1920px){
+    .team-entry{
+        &__adaptive{
+            display: none;
+        }
+    }
+}
+@media (max-width: 1440px){
+    .team-entry{
+        padding: 10px 60px 60px;
+        &__adaptive{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 820px){
+    .card{
+        @include flex(column nowrap, stretch, center, initial);
+        &__img{
+            min-width: 100%;
+            min-height: 500px;
+        }
+    }
+    .carousel-team{
+        margin: 60px;
+    }
+    .team-page{
+        &__wrapper{
+            grid-template-columns: 1fr 1fr;
+        }
+        h1{
+            padding: 10px 60px 60px;
+        }
+
+    }
+    .team-entry{
+        @include flex(column nowrap, initial, initial, 60px);
+        padding: 10px 60px 60px;
+        &__adaptive{
+            display: flex;
+        }
+        &__photo{
+            min-width: 300px;
+            height: 375px;
+        }
+        &__title{
+            &--pc{
+                display: none;
+            }
+        }
+        &__photo{
+            &--pc{
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 617px){
+    .carousel-team{
+        margin: 60px 30px;
+    }
+    .card{
+        &__info{
+            h1{
+                @include Montserrat(1.875rem, 700, 2.2856rem, 0em);
+            }
+        }
+        &__img{
+            min-width: 100%;
+            min-height: 400px;
+        } 
+    }
+    .team-page{
+        &__wrapper{
+            gap: 30px;
+            margin: 0 30px 30px;    
+            grid-template-columns: 1fr;
+        }
+        h1{
+            @include Montserrat(1.875rem, 700, 2.2856rem, 0em);
+            padding: 130px 30px 60px;
+        }
+    }
+    .team-entry{
+        @include flex(column nowrap, initial, initial, 60px);
+        padding: 130px 30px 60px;
+        h1{
+            @include Montserrat(1.875rem, 700, 2.2856rem, 0em);
+        }
+        &__adaptive{
+            display: none;
+        }
+        &__title{
+            &--pc{
+                display: block;
+            }
+        }
+        &__photo{
+            &--pc{
+                display: block;
+            }
+        }
+    }
+}

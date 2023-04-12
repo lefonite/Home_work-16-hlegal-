@@ -10,11 +10,11 @@
     <title>Homepage</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header header-pc">
         <a class="header__logo" href="./index.html"><img src="./img/icons/Logo.svg" alt="Logo"></a>
-        <nav class="header__nav nav">
-            <div class="header__info info">
-                <div class="header__lang info__lang">
+        <nav class="nav nav--dark-bg">
+            <div class="info">
+                <div class="info__lang">
                     <label class="info__label">
                         <input name="lang" type="radio" value="УК">
                         <span><strong>УК</strong></span>
@@ -29,17 +29,17 @@
                     </label>
                 </div>
                 <img src="./img/elements/Dot separator.svg" alt="Dot">
-                <div class="header__address info__address">
+                <div class="info__address">
                     <a target="_blank" href="https://www.google.com.ua/maps/place/%D0%9F%D0%B0%D0%BC'%D1%8F%D1%82%D0%BD%D0%B8%D0%BA+%D0%B6%D0%B5%D1%80%D1%82%D0%B2%D0%B0%D0%BC+%D1%82%D0%B5%D1%80%D0%BE%D1%80%D0%B8%D0%B7%D0%BC%D1%83/@50.436796,30.531956,20.86z/data=!4m13!1m7!3m6!1s0x40d4cf00d4d55dad:0x40f274cb5d991e55!2zUHlhbSd5YXRueWsgWmhlcnR2YW0gVGVyb3J5em11LCDQn9C-0LHQu9C40LfRgyDRgdGC0LDQvdGG0ZbRlyDQvNC10YLRgNC-INCa0LvQvtCy0YHRjNC60LAsINCy0YPQu9C40YbRjyDQnNC10YfQvdC40LrQvtCy0LAsIDE0LzEsINCa0LjRl9CyLCAwMTAyMw!3b1!8m2!3d50.4368601!4d30.5321067!3m4!1s0x40d4cf00d47ca801:0x83be22c2a2ec8095!8m2!3d50.4368159!4d30.532211?hl=ru">
                         <span>Kyiv,Mechnikova str, 14/1</span>
                     </a>
                 </div>
                 <img src="./img/elements/Dot separator.svg" alt="Dot">
-                <div class="header__phone info__phone">
-                    <a href="tel:0800211927"><strong>0800 211 927</strong></em></a>
+                <div class="info__phone">
+                    <a href="tel:0800211927"><strong>0800 211 927</strong></a>
                 </div>
                 <img src="./img/elements/Dot separator.svg" alt="Dot">
-                <div class="header__social info__social">
+                <div class="info__social">
                     <a target="_blank" href="https://www.facebook.com/">
                         <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_95717_3622)">
@@ -54,63 +54,535 @@
                     </a>
                 </div>
             </div>
-            <ul class="header__menu menu">
+            <ul class="menu">
                 <li class="menu__item">
                     <a class="menu__link" href="./about.html">about us</a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__link" href="#">services</a>
+                    <a class="menu__link" href="./services.html">services</a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__link" href="#">team</a>
+                    <a class="menu__link" href="./team.html">team</a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__link" href="#">publications</a>
+                    <a class="menu__link" href="./publications.html">publications</a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__link" href="#">contact</a>
+                    <a class="menu__link" href="./contacs.html">contact</a>
                 </li>
             </ul>
         </nav>
     </header>
+
+    <header class="header header-tablet">
+        <nav class="nav nav--dark-bg">
+            <div class="info">
+                <div class="info__lang">
+                    <label class="info__label">
+                        <input name="lang" type="radio" value="УК">
+                        <span><strong>УК</strong></span>
+                    </label>
+                    <label class="info__label">
+                        <input name="lang" type="radio" value="РУ">
+                        <span><strong>РУ</strong></span>
+                    </label>
+                    <label class="info__label info__label--active">
+                        <input name="lang" type="radio" checked value="EN">
+                        <span><strong>EN</strong></span>
+                    </label>
+                </div>
+                <img src="./img/elements/Dot separator.svg" alt="Dot">
+                <div class="info__address">
+                    <a target="_blank" href="https://www.google.com.ua/maps/place/%D0%9F%D0%B0%D0%BC'%D1%8F%D1%82%D0%BD%D0%B8%D0%BA+%D0%B6%D0%B5%D1%80%D1%82%D0%B2%D0%B0%D0%BC+%D1%82%D0%B5%D1%80%D0%BE%D1%80%D0%B8%D0%B7%D0%BC%D1%83/@50.436796,30.531956,20.86z/data=!4m13!1m7!3m6!1s0x40d4cf00d4d55dad:0x40f274cb5d991e55!2zUHlhbSd5YXRueWsgWmhlcnR2YW0gVGVyb3J5em11LCDQn9C-0LHQu9C40LfRgyDRgdGC0LDQvdGG0ZbRlyDQvNC10YLRgNC-INCa0LvQvtCy0YHRjNC60LAsINCy0YPQu9C40YbRjyDQnNC10YfQvdC40LrQvtCy0LAsIDE0LzEsINCa0LjRl9CyLCAwMTAyMw!3b1!8m2!3d50.4368601!4d30.5321067!3m4!1s0x40d4cf00d47ca801:0x83be22c2a2ec8095!8m2!3d50.4368159!4d30.532211?hl=ru">
+                        <span>Kyiv,Mechnikova str, 14/1</span>
+                    </a>
+                </div>
+                <img src="./img/elements/Dot separator.svg" alt="Dot">
+                <div class="info__phone">
+                    <a href="tel:0800211927"><strong>0800 211 927</strong></a>
+                </div>
+                <img src="./img/elements/Dot separator.svg" alt="Dot">
+                <div class="info__social">
+                    <a target="_blank" href="https://www.facebook.com/">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_95717_3622)">
+                            <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_95717_3622">
+                            <rect width="24" height="24" transform="translate(0 0.5)"/>
+                            </clipPath>
+                            </defs>
+                        </svg>    
+                    </a>
+                </div>
+            </div>
+            <a class="header__logo" href="./index.html"><img src="./img/icons/Logo.svg" alt="Logo"></a>
+            <ul class="menu">
+                <li class="menu__item">
+                    <a class="menu__link" href="./about.html">about us</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="./services.html">services</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="./team.html">team</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="./publications.html">publications</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="./contacs.html">contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <header class="header header-mob nav--dark-bg">
+        <div class="info">
+            <div class="info__lang">
+                <label class="info__label">
+                    <input name="lang" type="radio" value="УК">
+                    <span><strong>УК</strong></span>
+                </label>
+                <label class="info__label">
+                    <input name="lang" type="radio" value="РУ">
+                    <span><strong>РУ</strong></span>
+                </label>
+                <label class="info__label info__label--active">
+                    <input name="lang" type="radio" checked value="EN">
+                    <span><strong>EN</strong></span>
+                </label>
+            </div>
+            <div class="info__phone">
+                <a href="tel:0800211927"><strong>0800 211 927</strong></a>
+            </div>
+        </div>
+        <nav class="nav">
+            <a class="header__logo header-mob__logo" href="./index.html"><img src="./img/icons/Logo.svg" alt="Logo"></a>
+            <label for="popupCheckboxOne" class="popup-shower">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 10H25"  stroke-width="2"/>
+                    <path d="M7 16H25"  stroke-width="2"/>
+                    <path d="M7 22H25"  stroke-width="2"/>
+                </svg>
+            </label>
+        </nav>
+    </header>
+
+    <div class="popup-wrapper">
+        <input type="checkbox" class="popup-checkbox" id="popupCheckboxOne">
+        <div class="popup">
+            <div class="popup-content">
+                <label for="popupCheckboxOne" class="popup-closer">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 7L25 25" stroke="#EC6F5D" stroke-width="2"/>
+                        <path d="M25 7L7 25" stroke="#EC6F5D" stroke-width="2"/>
+                    </svg>
+                </label>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="./about.html">about us</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./services.html">services</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./team.html">team</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./publications.html">publications</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./contacs.html">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
     <main>
         <section class="main-wrap">
             <div class="main-wrap__hero">
                 <h1 class="main-wrap__title">you legal solutions provider</h1>
+                <img src="./img/elements/button-scroll.svg" alt="scroll">
             </div>
+            <div class="main-wrap__menu">
+                <ul>
+                    <li>
+                        <a href="#"><h1>Consistent</h1></a>
+                    </li>
+                    <li>
+                        <a href="#"><h1>Customer oriented</h1></a>
+                    </li>
+                    <li>
+                        <a href="#"><h1>Innovative</h1></a>
+                    </li>
+                    <li>
+                        <a href="#"><h1>Business oriented</h1></a>
+                    </li>
+                </ul>
+                <div class="main-wrap__txt">
+                    <h2>We turn the idea of legal services</h2>
+                    <p>
+                        Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve a number of important decisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.
+                    </p>
+                </div>
+            </div>
+            <section class="services">
+                <div class="services__tag tag">
+                    <a href="#">services</a>
+                    <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.5 2L8 6.5L3.5 11"  stroke-width="2"/>
+                    </svg> 
+                </div>
+                <h1>
+                    What can we do better than others?                
+                </h1>
+                <div class="services__wrapper">
+                    <a class="services__item service" href="./service-page.html">
+                        <div class="services__icon">
+                            <img src="./img/icons/Services-icon1.svg" alt="Services">
+                        </div>
+                        <h3>
+                            IT and e-commerce
+                        </h3>
+                        <p>
+                            An endless stream of contracts, tax issues, labor relations, corporate papers - legal work distracts you from doing business. But there is not much work to do to hire an in-house lawyer.
+                        </p>
+                    </a>
+                    <a class="services__item service" href="./service-page.html">
+                        <div class="services__icon">
+                            <img src="./img/icons/Services-icon2.svg" alt="Services">
+                        </div>
+                        <h3>
+                            Comprehensive daily legal support                        
+                        </h3>
+                        <p>
+                            In addition, over time, the work will become the same type and uninteresting for a full-time lawyer. And we know very well how difficult it is to find a good candidate with experience in the field of information technology in Ukraine.                        
+                        </p>
+                    </a>
+                    <a class="services__item service" href="./service-page.html">
+                        <div class="services__icon">
+                            <img src="./img/icons/Services-icon3.svg" alt="Services">
+                        </div>
+                        <h3>
+                            Structuring corporate relationships
+                        </h3>
+                        <p>
+                            Instead of just providing legal services, we will hire a lawyer or a whole team that will fit into the daily life of your company.
+                        </p>
+                    </a>
+                    <a class="services__item service" href="./service-page.html">
+                        <div class="services__icon">
+                            <img src="./img/icons/Services-icon4.svg" alt="Services">
+                        </div>
+                        <h3>
+                            Building contractual relations
+                        </h3>
+                        <p>
+                            Once a week, or week after month, you have your own lawyer by your side. Anyone in the company can catch it at the coffee maker and just talk about current affairs instead of waiting for update status.
+                        </p>
+                    </a>
+                    <a class="services__item service" href="./service-page.html">
+                        <div class="services__icon">
+                            <img src="./img/icons/Services-icon5.svg" alt="Services">
+                        </div>
+                        <div class="services__txt">
+                            <h3>
+                                Protection of business, intellectual property
+                            </h3>
+                            <p>
+                                And all the other time he will work on new diverse projects, so he will definitely not stop in professional development. One way or another, all Axon Partners will work for you instead of a corporate lawyer.
+                            </p>
+                        </div>
+                    </a>
+                    <a class="services__item service" href="./service-page.html">
+                        <div class="services__icon">
+                            <img src="./img/icons/Services-icon6.svg" alt="Services">
+                        </div>
+                        <h3>
+                            Judicial representation
+                        </h3>
+                        <p>
+                            Is it a small, medium-sized company or a market leader? Local business or multinational company? Do you have your own legal department or not?
+                        </p>
+                    </a>
+                </div>
+            </section>
         </section>
-        <section class="carousel-team">
-            <div class="card">
-                <div class="card__img">
-                </div>
-                <!-- НЕ РАБОТАЕТ -->
-                <div class="card__info">
-                    <div class="card__tag">
-                        команда
-                        <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.5 2L8 6.5L3.5 11"  stroke-width="2"/>
-                        </svg> 
-                    </div>
-                    <h1>
-                        Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
-                    </h1>
-                    <p>Олександр Олександровський</p>
-                    <span>Керуючий партнер</span>
-                </div>
-            </div>
-            <div class="carousel-team__slider">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="8" r="8"/>
-                </svg>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="8" r="8"/>
-                </svg>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="8" cy="8" r="8"/>
-                </svg>
-            </div>
 
+        <section class="main-wrap__js carousel-team">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="card">
+                        <div class="card__img"></div>
+                        <div class="card__info">
+                            <div class="card__tag tag">
+                                <a href="./team-page.html">команда</a>
+                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.5 2L8 6.5L3.5 11"  stroke-width="2"/>
+                                </svg> 
+                            </div>
+                            <h1>
+                                Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                            </h1>
+                            <p>Олександр Олександровський</p>
+                            <span>Керуючий партнер</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="card">
+                        <div class="card__img card__img--2"></div>
+                        <div class="card__info">
+                            <div class="card__tag tag">
+                                <a href="./team-page.html">команда</a>
+                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.5 2L8 6.5L3.5 11"  stroke-width="2"/>
+                                </svg> 
+                            </div>
+                            <h1>
+                                Відповідальність ми звикли брати на себе та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                            </h1>
+                            <p>Sergey Binn</p>
+                            <span>Associate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="card">
+                        <div class="card__img card__img--3"></div>
+                        <div class="card__info">
+                            <div class="card__tag tag">
+                                <a href="./team-page.html">команда</a>
+                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.5 2L8 6.5L3.5 11"  stroke-width="2"/>
+                                </svg> 
+                            </div>
+                            <h1>
+                                Гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі. Ми звикли брати на себе відповідальність та завжди.
+                            </h1>
+                            <p>Oksana Kobzar</p>
+                            <span>Equity partner, Attorney-at-law</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-team__slider" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
         </section>
+        <script src="./styles/script.js"></script>
+
+
+        <section class="patners">
+            <p class="patners__title">They already trust us</p>
+            <div class="patners__wrapper">
+                <div class="patners__item patners__item--hillel">
+                    <img src="./img/partners/Hillel-Logo-OneLine-White-Uk.png" alt="Hillel">
+                </div>
+                <div class="patners__item patners__item--wanna">
+                    <img src="./img/partners/wanna.png" alt="wanna">
+                </div>
+                <div class="patners__item patners__item--tapgerine">
+                    <img src="./img/partners/tapgerine.png" alt="tapgerine">
+                </div>
+                <div class="patners__item patners__item--3d">
+                    <img src="./img/partners/3d.png" alt="3d">
+                </div>
+                <div class="patners__item patners__item--ora">
+                    <img src="./img/partners/ora.png" alt="ora">
+               </div>
+                <div class="patners__item patners__item--ad">
+                    <img src="./img/partners/ad.png" alt="ad">
+                </div> 
+                <div class="patners__item patners__item--cli">
+                    <img src="./img/partners/cli.png" alt="cli">
+                </div>
+                <div class="patners__item patners__item--eco">
+                    <img src="./img/partners/eco.png" alt="eco">
+               </div>
+                <div class="patners__item patners__item--infra">
+                    <img src="./img/partners/infra.png" alt="infra">
+                </div> 
+                <div class="patners__item patners__item--сити">
+                    <img src="./img/partners/сити.png" alt="сити">
+                </div>
+                <div class="patners__item patners__item--art">
+                    <img src="./img/partners/art.png" alt="art">
+               </div>
+                <div class="patners__item patners__item--ulti">
+                    <img src="./img/partners/ulti.png" alt="ulti">
+                </div> 
+            </div>
+        </section>
+        <section class="publications">
+            <div class="publications__header">
+                <div class="tag">
+                    <a href="./publications.html">publications</a>
+                    <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.5 2L8 6.5L3.5 11"  stroke-width="2"/>
+                    </svg> 
+                </div>
+                <h1>
+                    We have something to tell
+                </h1>
+            </div>
+            <div class="publications__wrapper">
+                <a class="publication" href="./publications-page.html">
+                    <img src="./img/photos/publication1.png" alt="publication">
+                    <div class="publication__txt">
+                        <strong>Equity associate</strong>
+                        <span>April 22</span>
+                        <p>
+                            I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering my parents told me that if I…
+                        </p>
+                    </div>
+                </a>
+                <a class="publication" href="./publications-page.html">
+                    <img src="./img/photos/publication2.png" alt="publication">
+                    <div class="publication__txt">
+                        <strong>Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR</strong>
+                        <span>September 29</span>
+                        <p>
+                            And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.
+                        </p>
+                    </div>
+                </a>
+                <a class="publication" href="./publications-page.html">
+                    <img src="./img/photos/publication3.png" alt="publication">
+                    <div class="publication__txt">
+                        <strong>Millennial Testament</strong>
+                        <span>August 19</span>
+                        <p>
+                            What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation X looks like this: an apartment in…
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <footer class="footer footer-pc">
+            <div class="footer__top">
+                <div class="footer__address">
+                    <a class="footer__address-link" target="_blank" href="https://www.google.com.ua/maps/place/%D0%9F%D0%B0%D0%BC'%D1%8F%D1%82%D0%BD%D0%B8%D0%BA+%D0%B6%D0%B5%D1%80%D1%82%D0%B2%D0%B0%D0%BC+%D1%82%D0%B5%D1%80%D0%BE%D1%80%D0%B8%D0%B7%D0%BC%D1%83/@50.436796,30.531956,20.86z/data=!4m13!1m7!3m6!1s0x40d4cf00d4d55dad:0x40f274cb5d991e55!2zUHlhbSd5YXRueWsgWmhlcnR2YW0gVGVyb3J5em11LCDQn9C-0LHQu9C40LfRgyDRgdGC0LDQvdGG0ZbRlyDQvNC10YLRgNC-INCa0LvQvtCy0YHRjNC60LAsINCy0YPQu9C40YbRjyDQnNC10YfQvdC40LrQvtCy0LAsIDE0LzEsINCa0LjRl9CyLCAwMTAyMw!3b1!8m2!3d50.4368601!4d30.5321067!3m4!1s0x40d4cf00d47ca801:0x83be22c2a2ec8095!8m2!3d50.4368159!4d30.532211?hl=ru">
+                        <span>Kyiv,Mechnikova str, 14/1</span>
+                    </a>
+                    <img src="./img/elements/Dot separator.svg" alt="Dot">
+                    <a target="_blank" href="https://www.google.com.ua/maps/place/%D0%9F%D0%B0%D0%BC'%D1%8F%D1%82%D0%BD%D0%B8%D0%BA+%D0%B6%D0%B5%D1%80%D1%82%D0%B2%D0%B0%D0%BC+%D1%82%D0%B5%D1%80%D0%BE%D1%80%D0%B8%D0%B7%D0%BC%D1%83/@50.436796,30.531956,20.86z/data=!4m13!1m7!3m6!1s0x40d4cf00d4d55dad:0x40f274cb5d991e55!2zUHlhbSd5YXRueWsgWmhlcnR2YW0gVGVyb3J5em11LCDQn9C-0LHQu9C40LfRgyDRgdGC0LDQvdGG0ZbRlyDQvNC10YLRgNC-INCa0LvQvtCy0YHRjNC60LAsINCy0YPQu9C40YbRjyDQnNC10YfQvdC40LrQvtCy0LAsIDE0LzEsINCa0LjRl9CyLCAwMTAyMw!3b1!8m2!3d50.4368601!4d30.5321067!3m4!1s0x40d4cf00d47ca801:0x83be22c2a2ec8095!8m2!3d50.4368159!4d30.532211?hl=ru">
+                        <strong>On map</strong>
+                    </a>
+                </div>
+                <p class="footer__copy">© 2021 HLEGAL Law company, LLC</p>
+            </div>
+            <div class="footer__bottom">
+                <a target="_blank" href="https://www.facebook.com/">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_95717_3622)">
+                        <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_95717_3622">
+                        <rect width="24" height="24" transform="translate(0 0.5)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>    
+                </a>
+                <img src="./img/elements/Dot separator.svg" alt="Dot">
+                <div class="footer__phone">
+                    <a href="tel:0800211927"><strong>0800 211 927</strong></em></a>
+                </div>
+                <img src="./img/elements/Dot separator.svg" alt="Dot">
+                <div class="footer__email">
+                    <a href="mailto:contact@forstudy.space"><strong>contact@forstudy.space</strong></a>
+                </div>
+            </div>
+        </footer>
+
+        <footer class="footer footer-tablet">
+            <div class="footer__top footer__top--tablet">
+                <div class="footer__address">
+                    <a class="footer__address-link" target="_blank" href="https://www.google.com.ua/maps/place/%D0%9F%D0%B0%D0%BC'%D1%8F%D1%82%D0%BD%D0%B8%D0%BA+%D0%B6%D0%B5%D1%80%D1%82%D0%B2%D0%B0%D0%BC+%D1%82%D0%B5%D1%80%D0%BE%D1%80%D0%B8%D0%B7%D0%BC%D1%83/@50.436796,30.531956,20.86z/data=!4m13!1m7!3m6!1s0x40d4cf00d4d55dad:0x40f274cb5d991e55!2zUHlhbSd5YXRueWsgWmhlcnR2YW0gVGVyb3J5em11LCDQn9C-0LHQu9C40LfRgyDRgdGC0LDQvdGG0ZbRlyDQvNC10YLRgNC-INCa0LvQvtCy0YHRjNC60LAsINCy0YPQu9C40YbRjyDQnNC10YfQvdC40LrQvtCy0LAsIDE0LzEsINCa0LjRl9CyLCAwMTAyMw!3b1!8m2!3d50.4368601!4d30.5321067!3m4!1s0x40d4cf00d47ca801:0x83be22c2a2ec8095!8m2!3d50.4368159!4d30.532211?hl=ru">
+                        <span>Kyiv,Mechnikova str, 14/1</span>
+                    </a>
+                    <img src="./img/elements/Dot separator.svg" alt="Dot">
+                    <a target="_blank" href="https://www.google.com.ua/maps/place/%D0%9F%D0%B0%D0%BC'%D1%8F%D1%82%D0%BD%D0%B8%D0%BA+%D0%B6%D0%B5%D1%80%D1%82%D0%B2%D0%B0%D0%BC+%D1%82%D0%B5%D1%80%D0%BE%D1%80%D0%B8%D0%B7%D0%BC%D1%83/@50.436796,30.531956,20.86z/data=!4m13!1m7!3m6!1s0x40d4cf00d4d55dad:0x40f274cb5d991e55!2zUHlhbSd5YXRueWsgWmhlcnR2YW0gVGVyb3J5em11LCDQn9C-0LHQu9C40LfRgyDRgdGC0LDQvdGG0ZbRlyDQvNC10YLRgNC-INCa0LvQvtCy0YHRjNC60LAsINCy0YPQu9C40YbRjyDQnNC10YfQvdC40LrQvtCy0LAsIDE0LzEsINCa0LjRl9CyLCAwMTAyMw!3b1!8m2!3d50.4368601!4d30.5321067!3m4!1s0x40d4cf00d47ca801:0x83be22c2a2ec8095!8m2!3d50.4368159!4d30.532211?hl=ru">
+                        <strong>On map</strong>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__bottom footer__bottom--tablet">
+                <a target="_blank" href="https://www.facebook.com/">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_95717_3622)">
+                        <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_95717_3622">
+                        <rect width="24" height="24" transform="translate(0 0.5)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>    
+                </a>
+                <img src="./img/elements/Dot separator.svg" alt="Dot">
+                <div class="footer__phone">
+                    <a href="tel:0800211927"><strong>0800 211 927</strong></em></a>
+                </div>
+                <img src="./img/elements/Dot separator.svg" alt="Dot">
+                <div class="footer__email">
+                    <a href="mailto:contact@forstudy.space"><strong>contact@forstudy.space</strong></a>
+                </div>
+            </div>
+            <p class="footer__copy footer__copy--tablet">© 2021 HLEGAL Law company, LLC</p>
+        </footer>
+
+        <footer class="footer footer-mob">
+            <div class="footer__top footer__top--tablet">
+                <div class="footer__address footer__address--mob">
+                    <a class="footer__address-link" target="_blank" href="https://www.google.com.ua/maps/place/%D0%9F%D0%B0%D0%BC'%D1%8F%D1%82%D0%BD%D0%B8%D0%BA+%D0%B6%D0%B5%D1%80%D1%82%D0%B2%D0%B0%D0%BC+%D1%82%D0%B5%D1%80%D0%BE%D1%80%D0%B8%D0%B7%D0%BC%D1%83/@50.436796,30.531956,20.86z/data=!4m13!1m7!3m6!1s0x40d4cf00d4d55dad:0x40f274cb5d991e55!2zUHlhbSd5YXRueWsgWmhlcnR2YW0gVGVyb3J5em11LCDQn9C-0LHQu9C40LfRgyDRgdGC0LDQvdGG0ZbRlyDQvNC10YLRgNC-INCa0LvQvtCy0YHRjNC60LAsINCy0YPQu9C40YbRjyDQnNC10YfQvdC40LrQvtCy0LAsIDE0LzEsINCa0LjRl9CyLCAwMTAyMw!3b1!8m2!3d50.4368601!4d30.5321067!3m4!1s0x40d4cf00d47ca801:0x83be22c2a2ec8095!8m2!3d50.4368159!4d30.532211?hl=ru">
+                        <span>Kyiv,Mechnikova str, 14/1</span>
+                    </a>
+                    <a target="_blank" href="https://www.google.com.ua/maps/place/%D0%9F%D0%B0%D0%BC'%D1%8F%D1%82%D0%BD%D0%B8%D0%BA+%D0%B6%D0%B5%D1%80%D1%82%D0%B2%D0%B0%D0%BC+%D1%82%D0%B5%D1%80%D0%BE%D1%80%D0%B8%D0%B7%D0%BC%D1%83/@50.436796,30.531956,20.86z/data=!4m13!1m7!3m6!1s0x40d4cf00d4d55dad:0x40f274cb5d991e55!2zUHlhbSd5YXRueWsgWmhlcnR2YW0gVGVyb3J5em11LCDQn9C-0LHQu9C40LfRgyDRgdGC0LDQvdGG0ZbRlyDQvNC10YLRgNC-INCa0LvQvtCy0YHRjNC60LAsINCy0YPQu9C40YbRjyDQnNC10YfQvdC40LrQvtCy0LAsIDE0LzEsINCa0LjRl9CyLCAwMTAyMw!3b1!8m2!3d50.4368601!4d30.5321067!3m4!1s0x40d4cf00d47ca801:0x83be22c2a2ec8095!8m2!3d50.4368159!4d30.532211?hl=ru">
+                        <strong>On map</strong>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__bottom footer__bottom--mob">
+                <a target="_blank" href="https://www.facebook.com/">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_95717_3622)">
+                        <path d="M24 12.5733C24 5.90541 18.6274 0.5 12 0.5C5.37258 0.5 0 5.90541 0 12.5733C0 18.5995 4.38823 23.5943 10.125 24.5V16.0633H7.07813V12.5733H10.125V9.91343C10.125 6.88755 11.9165 5.21615 14.6576 5.21615C15.9705 5.21615 17.3438 5.45195 17.3438 5.45195V8.42313H15.8306C14.3399 8.42313 13.875 9.35379 13.875 10.3086V12.5733H17.2031L16.6711 16.0633H13.875V24.5C19.6118 23.5943 24 18.5995 24 12.5733Z"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_95717_3622">
+                        <rect width="24" height="24" transform="translate(0 0.5)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>    
+                </a>
+                <div class="footer__phone">
+                    <a href="tel:0800211927"><strong>0800 211 927</strong></em></a>
+                </div>
+                <div class="footer__email">
+                    <a href="mailto:contact@forstudy.space"><strong>contact@forstudy.space</strong></a>
+                </div>
+            </div>
+            <p class="footer__copy footer__copy--tablet">© 2021 HLEGAL Law company, LLC</p>
+        </footer>
+
+        
+
+
+
+
+
 
 
     </main>

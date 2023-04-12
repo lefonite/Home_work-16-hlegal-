@@ -1,0 +1,128 @@
+@import '../colors/style.scss';
+@import '../mixins/style.scss';
+
+.main-wrap{
+  position: relative;
+  background: $supersoft;  
+  border-radius: 0 0 12px 12px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  &__hero{
+    position: relative;
+    background-image: url(../img/elements/Symbol.svg);
+    background-size: auto 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    @include flex(column nowrap, center, center, initial);
+    height: 100vh;
+    img{
+      position: absolute;
+      bottom: 30px;
+    }
+  }
+  &__title{
+    color: $white;
+    text-align: center;
+  }
+  &__menu{
+    padding: 60px 10%;
+    @include flex(row nowrap, stretch, initial, 60px);
+    ul{
+      padding: 14px 0;
+      @include flex(column nowrap, flex-end, center, 30px);
+    }
+    
+    li{
+      white-space: nowrap;
+    }
+    h2,p{
+      color: $white;
+    }
+    h1{
+      color: $grey-text;
+    }
+    h1:hover{
+      color: $accent;  
+    }
+    ul>:nth-child(1){
+      background-image: $gradient-red-text;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  &__txt{
+    @include flex(column nowrap, initial, center, initial);
+    border-left: 4px rgba($color: $white, $alpha: 0.3) solid;
+    padding: 40px 0 40px 60px;
+    p{
+      margin-top: 30px;
+    }
+  }
+}
+
+.main-wrap:before, .main-wrap:after {
+  content: "";
+  display: block;
+  border-radius: 0 0 12px 12px;
+  position: absolute;
+  height: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-wrap:before {
+  bottom: -10px;
+  background-color: #CACADB;
+  width: calc(100% - 20px);
+}
+.main-wrap:after {
+  bottom: -20px;
+  background-color: #E7E7F2;
+  width: calc(100% - 40px);
+}
+
+
+
+@media (max-width: 820px){
+  .main-wrap{
+    &__menu{
+      padding: 60px 10%;
+      overflow: hidden;
+      @include flex(column nowrap, stretch, initial, 30px);
+      ul{
+        padding: 0;
+        @include flex(row nowrap, flex-start, initial, 30px);
+        overflow: auto;
+        -webkit-mask-image: 
+        linear-gradient(to left, transparent 0%, $main-regular 100%);
+        mask-image: linear-gradient(to left, transparent 0%, $main-regular 100%);
+      }
+      ul::-webkit-scrollbar{
+        display: none;
+      }
+    }
+    &__txt{
+      padding: 40px 0;
+      @include flex(column nowrap, flex-start, initial, initial);
+      border-left: none;
+      border-top: 4px rgba($color: $white, $alpha: 0.3) solid;          
+    }
+  }
+}
+@media (max-width: 617px){
+  .main-wrap{
+    &__title{
+      padding: 0 30px;
+    }
+    &__menu{
+      padding: 60px 30px;
+      h1{
+        @include Montserrat(1.875rem, 700, 2.2856rem, 0em);
+      }
+      h2{
+        @include Montserrat(1.25rem, 700, 1.5237rem, 0em);
+      }
+    }
+  }
+} 
